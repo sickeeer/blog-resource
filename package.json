@@ -1,0 +1,16 @@
+{
+  "name": "vsite",
+  "version": "1.0.0",
+  "description": "a website by vuepress",
+  "main": "index.js",
+  "author": "sicker",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/theme-blog": "^2.3.3",
+    "vuepress": "^1.8.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
