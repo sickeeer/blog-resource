@@ -1,5 +1,5 @@
 ---
-title: 测试 layout
+title: 测试 layout  linwei 
 date: 2020-01-11
 tags: 
   - JavaScript
@@ -13,7 +13,7 @@ layout: Post
 
 My content.
 ```
-测试一下
+测试一下   linwei
 npm run dev
 ```
 ```php
