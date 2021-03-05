@@ -16,7 +16,7 @@ layout: Post
 
 问题描述：
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard.png)
+![img](../../images/clipboard.png)
 
   电脑中缺少python环境和桌面应用程序
 
@@ -29,7 +29,7 @@ layout: Post
 
  它会安装python 2.7安装然后安装VisualStudio
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1614914291135.png)
+![img](../../images/clipboard-1614914291135.png)
 
 注意
 
@@ -39,7 +39,7 @@ layout: Post
 
 当滑轮滚动命令行窗口 它不锁定  或者看到
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1614914314053.png)
+![img](../../images/clipboard-1614914314053.png)
 
 All done!时
 
