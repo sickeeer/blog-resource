@@ -27,7 +27,7 @@ layout: Post
  npm install --global --production windows-build-tools  
 ```
 
- 它会安装python 2.7安装然后安装VisualStudio
+ 它会安装python 2.7 和  VisualStudio
 
 ![img](../../images/clipboard-1614914291135.png)
 
