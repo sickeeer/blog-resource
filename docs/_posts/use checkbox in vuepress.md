@@ -15,7 +15,7 @@ yarn add markdown-it-task-lists
 ```
 ### 配置
 在 `.vuepress` 下的 `config.js` 中，在如下位置加入
-```json
+```javascript
 module.exports = {
     .
     .

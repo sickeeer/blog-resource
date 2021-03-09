@@ -1,6 +1,9 @@
 module.exports = {
   title: '养鱼技术交流博客',
   description: '前后端技术文章分享', // 文章页面描述
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
   theme: 'blog',
   markdown: {
     lineNumbers: true,
