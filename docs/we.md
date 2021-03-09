@@ -12,7 +12,7 @@ meta:
 
 - [ ] 多语言
 
-- [ ] markdown 复选框支持
+- [x] markdown 复选框支持
 
 - [ ] markdown 自定义容器
 

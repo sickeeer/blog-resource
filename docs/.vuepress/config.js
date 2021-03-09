@@ -3,7 +3,11 @@ module.exports = {
   description: '前后端技术文章分享', // 文章页面描述
   theme: 'blog',
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    extendMarkdown: md => {
+      // 使用更多的 markdown-it 插件!
+      md.use(require('markdown-it-task-lists'))
+    }
   },
   themeConfig: {
     dateFormat: 'YYYY-MM-DD',

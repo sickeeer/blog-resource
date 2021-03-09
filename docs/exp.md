@@ -106,3 +106,5 @@ metaTitle: 网页的title
 ### 其他
 
 其他格式 请使用 Typora 编辑器辅助使用
+或者参照
+https://markdown-it.github.io/

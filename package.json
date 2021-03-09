@@ -13,5 +13,8 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "markdown-it-task-lists": "^2.1.1"
   }
 }
