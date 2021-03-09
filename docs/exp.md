@@ -52,7 +52,7 @@ console.log('你好，VuePress！')
 
 > 代码块行高亮
 
-``` js {1，3-5}
+``` js {1,3-5}
 export default {
   data () {
     return {
