@@ -4,7 +4,7 @@ meta:
   - name: description
     content: 书写示例
 ---
-> 插槽
+### 插槽
 
 ::: slot module1
 this is module1
@@ -14,11 +14,13 @@ this is module1
 this is module2
 :::
 
-> 目录
+### 目录
 
 [[toc]]
 
-> 自定义容器
+### 引用
+> 这是一条引用
+### 自定义容器
 
 ::: tip 告示
 这是一个提示
@@ -50,7 +52,7 @@ console.log('你好，VuePress！')
 
 注意：如果样式未达到预期，请补充css
 
-> 代码块行高亮
+### 代码块行高亮
 
 ``` js {1,3-5}
 export default {
@@ -64,11 +66,11 @@ export default {
 
 更多用法参照：https://v1.vuepress.vuejs.org/zh/guide/markdown.html
 
-> emoji
+### emoji
 
 :tada:
 
-> 常用Front Matter
+### 常用Front Matter
 
 ```yaml
 ---
