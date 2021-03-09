@@ -389,7 +389,300 @@ export default{
 
 
 
-### 跨子组件传参
+### 跨组件传参
+> 以下示例均以 vue-cli 创建的默认实例为模板
+#### 根实例
+在 `main.js` 实例化vue对象时，引入 `data` 与 `methods`
+``` javascript
+new Vue({
+  data: {who:"我是main.js"},
+  methods: { hello(){console.log("hello from main.js")} }
+  render: h => h(App),
+}).$mount('#app')
+```
+那么所有的节点均可以以 `this.$root.xxx` 获取到属性与方法
 
-#### 
+#### 父级组件
+app.vue
+``` javascript
+data() {
+    return {
+      who: "我是App.vue",
+    };
+},
+methods: { hello(){console.log("hello from parent component")} }
+```
+那么，其子组件 如 `helloworld.vue` 则可以通过 `this.$parents.xxx` 来获取其属性与方法
+#### 子组件
+```
+<HelloWorld ref="helloworld" msg="Welcome to Your Vue.js App" />
+```
+通过 `this.$refs.helloworld.XXX` 获取子组件的属性与方法
 
+### 依赖注入
+在最上级的组件中注入属性与方法
+``` javascript
+export default {
+  name: "App",
+  data() {},
+  provide: function () {
+    return {
+      provide: this.provide,
+    };
+  },
+}
+```
+子孙组件通过
+``` javascript
+export default {
+  name: "App",
+  data() {},
+  inject: ['provide'],
+  mounted(){
+    console.log("从祖节点获取到的provide：",this.provide)
+  }
+}
+```
+可直接使用该属性方法
+
+#### 综合示例
+main.js
+```javascript
+import Vue from 'vue'
+import App from './App.vue'
+Vue.config.productionTip = false
+new Vue({
+  data: {who:"我是main.js"},
+  methods: {hello(){console.log("hello from main.js")}},
+  render: h => h(App),
+}).$mount('#app')
+```
+App.vue
+```vue
+<template>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld ref="helloworld" msg="Welcome to Your Vue.js App" />
+    <button @click="b = !b">button</button>
+    <transition
+      name="slide-fade"
+      :duration="{ enter: 500, leave: 800 }"
+      mode="out-in"
+    >
+      <div v-if="b">111</div>
+    </transition>
+    <transition
+      name="custom-classes-transition"
+      enter-active-class="animated tada"
+      leave-active-class="animated bounceOutRight"
+    >
+      <p v-if="b">需要配 animated.css 库</p>
+    </transition>
+  </div>
+</template>
+<script>
+import HelloWorld from "./components/HelloWorld.vue";
+export default {
+  name: "App",
+  data() {
+    return {
+      who: "我是App.vue",
+      provide: "我是App.vue的提供者",
+      b: true,
+    };
+  },
+  methods: {
+    hello() {
+      console.log("hello from parent component");
+    },
+  },
+  computed: {},
+  mounted() {
+    console.log(this.$refs.helloworld.who);
+  },
+  provide: function () {
+    return {
+      provide: this.provide,
+      hello: this.hello
+    };
+  },
+  components: {
+    HelloWorld,
+  },
+};
+</script>
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+```
+components/HelloWorld.vue
+``` vue
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <HelloChild />
+  </div>
+</template>
+<script>
+import HelloChild from './HelloChild.vue'
+export default {
+  name: 'HelloWorld',
+  data() {
+    return {
+    who: "我是helloWorld.vue"
+    }
+  },
+  components: {
+    HelloChild
+  },
+  inject: ['provide'],
+  props: {
+    msg: String
+  },
+  mounted(){
+      console.log("父节点",this.$parent.who)
+      console.log("根节点",this.$root.who)
+      this.$root.hello()
+      this.$parent.hello()
+      console.log("从父节点获取到的provide：",this.provide)
+  }
+}
+</script>
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+</style>
+```
+components/HelloChild.vue
+```vue
+<template>
+  <div class="hello">
+      我是 hello  的子组件
+  </div>
+</template>
+<script>
+export default {
+  name: 'helloChild',
+  data() {
+    return {
+    who: "我是helloChild.vue"
+    }
+  },
+  inject: ['provide','hello'],
+  mounted(){
+    console.log("父节点",this.$parent.who)
+    console.log("从祖节点获取到的provide：",this.provide)
+    console.log(this.hello)
+  }
+}
+</script>
+```
+> 输出结果
+``` bash
+HelloChild.vue
+---
+父节点 我是helloWorld.vue
+从祖节点获取到的provide： 我是App.vue的提供者
+ƒ hello() {
+    console.log("hello from parent component");
+  }
+---
+
+HelloWorld.vue
+---
+父节点 我是App.vue
+根节点 我是main.js
+从父节点获取到的provide： 我是App.vue的提供者
+---
+
+main.js
+---
+hello from main.js
+---
+
+App.vue
+---
+hello from parent component
+我是helloWorld.vue
+```
+#### vuex
+...
+### 组件复用与自动销毁
+```javascript
+mounted: function () {
+  this.attachDatepicker('startDateInput')
+  this.attachDatepicker('endDateInput')
+},
+methods: {
+  attachDatepicker: function (refName) {
+    var picker = new Pikaday({
+      field: this.$refs[refName],
+      format: 'YYYY-MM-DD'
+    })
+
+    this.$once('hook:beforeDestroy', function () {
+      picker.destroy()
+    })
+  }
+}
+```
+
+### 过渡
+template
+```javascript
+<button @click="b = !b">button</button>
+<transition
+    name="slide-fade"
+    :duration="{ enter: 500, leave: 800 }"
+    mode="out-in"
+>
+    <div v-if="b">111</div>
+</transition>
+<transition
+    name="custom-classes-transition"
+    enter-active-class="animated tada"
+    leave-active-class="animated bounceOutRight"
+>
+    <p v-if="b">需要配 animated.css 库</p>
+</transition>
+```
+js
+```javascript
+data() {
+    return {
+      b: true,
+    };
+},
+```
+css
+```css
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+```
