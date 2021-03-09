@@ -1,7 +1,5 @@
 <template>
-  <div>
-    this is me
-  </div>
+  <Content />
 </template>
 <script>
 export default {

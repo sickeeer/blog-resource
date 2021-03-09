@@ -1,8 +1,9 @@
 ---
 layout: Exp
+title: Markdown 书写示例
 meta: 
   - name: description
-    content: 书写示例
+    content: Markdown 书写示例
 ---
 ### 插槽
 
@@ -93,4 +94,15 @@ permalink: 伪静态用生成文章url
 metaTitle: 网页的title
 ---
 ```
+###  复选框
 
+- [ ] 看板娘
+
+- [ ] 调色板
+
+- [x] 多语言
+
+
+### 其他
+
+其他格式 请使用 Typora 编辑器辅助使用

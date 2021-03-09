@@ -2,6 +2,9 @@ module.exports = {
   title: '养鱼技术交流博客',
   description: '前后端技术文章分享', // 文章页面描述
   theme: 'blog',
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     dateFormat: 'YYYY-MM-DD',
     nav: [
@@ -22,7 +25,7 @@ module.exports = {
         link: '/we',
       },
       {
-        text: '书写示例',
+        text: '书写',
         link: '/exp'
       }
     ],
@@ -44,4 +47,5 @@ module.exports = {
       ],
     },
   },
+  plugins: ['@vuepress/back-to-top']
 }
