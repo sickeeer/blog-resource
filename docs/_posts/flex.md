@@ -47,7 +47,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 主轴侧轴
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615442943383.png)
+![img](../../images/clipboard-1615442943383.png)
 
 横向为主轴，纵向为测轴，当然也是可以变换的
 
@@ -57,7 +57,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 **flex-direction**
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615442973080.png)
+![img](../../images/clipboard-1615442973080.png)
 
 开启Flex的口诀就是在父容器中设定：display:flex;
 
@@ -65,7 +65,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 **4.1.1  flex-direction:row;**
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443016680.png)
+![img](../../images/clipboard-1615443016680.png)
 
 
 
@@ -75,7 +75,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 而且1 2 3 的顺序也变成了3 2 1
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443045588.png)
+![img](../../images/clipboard-1615443045588.png)
 
 
 
@@ -85,7 +85,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 主轴将变为为Y轴，也就是子元素开始以Y轴分布
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443059981.png)
+![img](../../images/clipboard-1615443059981.png)
 
 
 
@@ -93,7 +93,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 有横向反转就有纵向反转
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443075803.png)
+![img](../../images/clipboard-1615443075803.png)
 
 
 
@@ -105,7 +105,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 **justify-content**
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443097687.png)
+![img](../../images/clipboard-1615443097687.png)
 
 
 
@@ -119,13 +119,13 @@ flex-direction:row;                       以X为主轴
 
 justify-content:flex-start;             子元素从父容器的左侧开始分布
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443108303.png)
+![img](../../images/clipboard-1615443108303.png)
 
 **4.2.2** **justify-content:flex-end**
 
 子元素从父容器的右侧开始分布
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443120773.png)
+![img](../../images/clipboard-1615443120773.png)
 
 
 
@@ -133,7 +133,7 @@ justify-content:flex-start;             子元素从父容器的左侧开始分�
 
 子元素从父容器的中间开始分布
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443129040.png)
+![img](../../images/clipboard-1615443129040.png)
 
 
 
@@ -141,7 +141,7 @@ justify-content:flex-start;             子元素从父容器的左侧开始分�
 
 子元素平分主轴（可能是X轴也可能是Y轴）一行或一列的空间（如果主轴是X轴那么就平分一行的空间，如果主轴是Y轴就平分一列的空间）
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443146032.png)
+![img](../../images/clipboard-1615443146032.png)
 
 
 
@@ -151,7 +151,7 @@ justify-content:flex-start;             子元素从父容器的左侧开始分�
 
 justify-content:space-between;是贴边分布
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443154051.png)
+![img](../../images/clipboard-1615443154051.png)
 
 
 
@@ -173,11 +173,11 @@ justify-content:space-between;是贴边分布
 
 所以现在父容器剩余的宽度为120px不能再容纳一个子容器了
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443175212.png)
+![img](../../images/clipboard-1615443175212.png)
 
 但是再加一个子容器的话flex可以自动分配父容器的宽度
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443181990.png)
+![img](../../images/clipboard-1615443181990.png)
 
 可以看到子容器的变化——宽度从原来的200px变为了180px
 
@@ -185,7 +185,7 @@ justify-content:space-between;是贴边分布
 
 这样一来就不会影响到我们想要的布局
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443195338.png)
+![img](../../images/clipboard-1615443195338.png)
 
 
 
@@ -193,13 +193,13 @@ justify-content:space-between;是贴边分布
 
 在flex布局中默认不换行也就是 flex-wrap:nowrap;
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443204617.png)
+![img](../../images/clipboard-1615443204617.png)
 
 **4.3.2  flex-wrap:wrap;**
 
  当所有子容器的宽度加起来已经超过父容器的宽度时，若不想缩小子容器的宽度那就要设置换行  flex-wrap:wrap;
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443216838.png)
+![img](../../images/clipboard-1615443216838.png)
 
 
 
@@ -207,7 +207,7 @@ justify-content:space-between;是贴边分布
 
 设置侧轴上子元素的排列方式，如果主轴为X，侧轴就是Y（默认的）
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443235394.png)
+![img](../../images/clipboard-1615443235394.png)
 
 例子：
 
@@ -215,25 +215,25 @@ justify-content:space-between;是贴边分布
 
 初始状态是 也是默认的效果 align-items:flex-start;
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443246745.png)
+![img](../../images/clipboard-1615443246745.png)
 
 **4.4.2  align-items:flex-end;**
 
 加入 align-items:flex-end;时
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443255144.png)
+![img](../../images/clipboard-1615443255144.png)
 
 **4.4.3  align-items:center;**
 
 加入 align-items:center;时
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443262532.png)
+![img](../../images/clipboard-1615443262532.png)
 
 **4.4.4  align-items:stretch;**
 
 加入 align-items:stretch;时 注意要子容器不要设高度，因为这个属性会将子容器的高度拉升至父容器一样（包含子容器的margin）
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443270594.png)
+![img](../../images/clipboard-1615443270594.png)
 
 **4.5 align-content** 
 
@@ -241,11 +241,11 @@ justify-content:space-between;是贴边分布
 
 设置这个属性时，必须允许子元素换行——flex-wrap:wrap;
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443280848.png)
+![img](../../images/clipboard-1615443280848.png)
 
 初始状态
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443286815.png)
+![img](../../images/clipboard-1615443286815.png)
 
 **4.5.1  align-content:flex-start ;**
 
@@ -253,13 +253,13 @@ justify-content:space-between;是贴边分布
 
 
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443295315.png)
+![img](../../images/clipboard-1615443295315.png)
 
 **4.5.2  align-content:flex-end ;**
 
 从下面开始分布
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443311404.png)
+![img](../../images/clipboard-1615443311404.png)
 
 **4.5.3  align-content:center ;**
 
@@ -267,15 +267,15 @@ justify-content:space-between;是贴边分布
 
 
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443318058.png)
+![img](../../images/clipboard-1615443318058.png)
 
 **4.5.4  align-content:space-around;**
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443326342.png)
+![img](../../images/clipboard-1615443326342.png)
 
 **4.5.5  align-content:space-between;**
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443334093.png)
+![img](../../images/clipboard-1615443334093.png)
 
 align-content和align-items的区别：
 
@@ -364,7 +364,7 @@ felx布局的css部分
 }
 ```
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443920955.png)
+![img](../../images/clipboard-1615443920955.png)
 
 并且屏幕缩小时绿色宽度是会进行自适应的
 
@@ -404,7 +404,7 @@ p span{
 }
 ```
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615443977117.png)
+![img](../../images/clipboard-1615443977117.png)
 
 也可以指定性的不平均分配
 
@@ -418,7 +418,7 @@ p span:nth-child(1){
 }
 ```
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615444001189.png)
+![img](../../images/clipboard-1615444001189.png)
 
 而且在页面缩小时，子容器都会按此等分缩小
 
@@ -434,7 +434,7 @@ p span:nth-child(1){
 
 现有父容器中有三个子容器
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615444015256.png)
+![img](../../images/clipboard-1615444015256.png)
 
 现在只想让第三个子容器移动到下方
 
@@ -444,7 +444,7 @@ div span:nth-child(3) {
 }
 ```
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615444035763.png)
+![img](../../images/clipboard-1615444035763.png)
 
 **5.1.3  order**
 
@@ -468,7 +468,7 @@ div span:nth-child(2){
 }
 ```
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615444338331.png)
+![img](../../images/clipboard-1615444338331.png)
 
 值得注意的是，如果有子容器1号2号3号，现在想把1号容器移动到2号之后3号之前  原理上是将1号容器的order设为1代表向后移动一位
 
@@ -483,7 +483,7 @@ div span:nth-child(1) {
 
 1号容器会直接跑到最后面
 
-![img](D:\codeVueDemo\blog-resource\images\clipboard-1615444364097.png)
+![img](../../images/clipboard-1615444364097.png)
 
 多加几个容器也是一样
 
@@ -498,6 +498,4 @@ div span:nth-child(1) {
 
 
 好了Flex布局到这里已经足够一般开发使用了
-
-author Linvkey
 
