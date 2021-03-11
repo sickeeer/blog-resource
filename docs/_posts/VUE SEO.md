@@ -6,7 +6,7 @@ tags:
   - Vue
   - SEO
 author: LinvKey
-location: yidonghzhidi
+location: 移动智地
 layout: Post
 summary: 对于VUE的SEO优化
 ---
