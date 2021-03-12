@@ -39,7 +39,7 @@ data-item="{{itemJira}}" ：点击后传入的数据
   },
 ```
 
-### 子传父
+### 3.子传父
 
 **子：**
 
@@ -71,7 +71,7 @@ javascript
 
 **注意：在父组件中的js文件里获取子组件传过来的值,这里的自定义方法要写在Component构造器中的methods里，因为我写在Page中他不会被触发**
 
-### 根据值来给定不同的CSS样式
+### 4.根据值来给定不同的CSS样式
 
 ```javascript
 <view class="{{isChecked?'is_checked':'normal'}}" bindtap="serviceSelection"></view>
