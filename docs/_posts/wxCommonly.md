@@ -1,12 +1,10 @@
 ---
-title: 测试
-date: 2021-03-4
+title: 微信小程序常用API
+date: 2021-03-12
 tags: 
-  - JavaScript
-  - Vue
-  - ElementUI
-author: LinvKey
-location: yidonghzidi
+  - 微信小程序
+author: 孙一钫
+location: 移动智地
 layout: Post
 ---
 
