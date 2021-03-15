@@ -1,6 +1,6 @@
 ---
-title: 微信小程序常用API
-date: 2021-03-12
+title: wxScroll-swiper
+date: 2021-03-15
 tags: 
   - 微信小程序
 author: 孙一钫
