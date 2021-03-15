@@ -11,19 +11,19 @@ layout: Post
 summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为Flex布局。
 ---
 
-**1  flex布局的特性**
+## 1  flex布局的特性 
 
 任何容器都可以进行flex布局
 
-**2  Flex特殊之处**
+## 2  Flex特殊之处
 
 父容器开启Flex阵法之后，子元素的float 浮动，清楚clear，vartical-align都将失效，因为这一切都将由Flex掌管，也就是无需子元素设置那些属性
 
-**3  Flex核心原理**
+## 3  Flex核心原理
 
 通过给父容器添加flex属性，来控制子元素位置的排列方式
 
-**4  父容器定制的规则****☆**
+## 4  父容器定制的规则
 
 以下6个属性是对父容器设定的：
 
@@ -39,7 +39,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 **flex-flow：复合属性 相当于同时设置（flex-direction：设置主轴的方向）和（flex-wrap：设置子元素是否换行）**
 
-**4.1  Flex-direction 设置主轴**
+### 4.1  Flex-direction 设置主轴
 
 注意在设置这个属性之前，要先开启flex布局
 
@@ -63,13 +63,13 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 
 
-**4.1.1  flex-direction:row;**
+### 4.1.1  flex-direction:row;
 
 ![img](../../images/clipboard-1615443016680.png)
 
 
 
-**4.1.2  flex-direction:row-reverse;**
+### 4.1.2  flex-direction:row-reverse;
 
 设置完横向反转后，原来是从左往右，现在是从右往左，
 
@@ -79,7 +79,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 
 
-**4.1.3  flex-direction:column;**
+### 4.1.3  flex-direction:column;
 
 刚刚的主轴是X轴，设置完flex-direction:column;后
 
@@ -89,7 +89,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 
 
-**4.1.****4**  **flex-direction:column-reverse;**
+### 4.1.4 flex-direction:column-reverse;
 
 有横向反转就有纵向反转
 
@@ -97,7 +97,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 
 
-**4.2** **justify-content设置主轴上子元素的排列方式**
+### 4.2 justify-content设置主轴上子元素的排列方式
 
 注意在设置这个属性之前，要先设置好主轴是哪个
 
@@ -109,7 +109,7 @@ summary: Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒�
 
 
 
-4.2.1 justify-content:flex-start;** 
+### 4.2.1 justify-content:flex-start;
 
 其实在display:flex这句话一出来
 
@@ -121,7 +121,7 @@ justify-content:flex-start;             子元素从父容器的左侧开始分�
 
 ![img](../../images/clipboard-1615443108303.png)
 
-**4.2.2** **justify-content:flex-end**
+### 4.2.2 justify-content:flex-end
 
 子元素从父容器的右侧开始分布
 
@@ -129,7 +129,7 @@ justify-content:flex-start;             子元素从父容器的左侧开始分�
 
 
 
-**4.2.3** **justify-content:center;** 
+### 4.2.3 justify-content:center; 
 
 子元素从父容器的中间开始分布
 
@@ -137,7 +137,7 @@ justify-content:flex-start;             子元素从父容器的左侧开始分�
 
 
 
-**4.2.4** **justify-content:space-around;**
+### 4.2.4 justify-content:space-around;
 
 子元素平分主轴（可能是X轴也可能是Y轴）一行或一列的空间（如果主轴是X轴那么就平分一行的空间，如果主轴是Y轴就平分一列的空间）
 
@@ -145,7 +145,7 @@ justify-content:flex-start;             子元素从父容器的左侧开始分�
 
 
 
-**4.2.5 justify-content:space-between;**
+### 4.2.5 justify-content:space-between;
 
 刚刚的justify-content:space-around;是不贴边分布
 
@@ -155,7 +155,7 @@ justify-content:space-between;是贴边分布
 
 
 
-**4.3 flex-wrap**
+## 4.3 flex-wrap
 
 在传统布局时，一般是用浮动进行横向排列然后再用margin进行分布
 
@@ -189,13 +189,13 @@ justify-content:space-between;是贴边分布
 
 
 
-**4.3.1  flex-wrap:nowrap;**
+### 4.3.1  flex-wrap:nowrap;
 
 在flex布局中默认不换行也就是 flex-wrap:nowrap;
 
 ![img](../../images/clipboard-1615443204617.png)
 
-**4.3.2  flex-wrap:wrap;**
+### 4.3.2  flex-wrap:wrap;
 
  当所有子容器的宽度加起来已经超过父容器的宽度时，若不想缩小子容器的宽度那就要设置换行  flex-wrap:wrap;
 
@@ -203,7 +203,7 @@ justify-content:space-between;是贴边分布
 
 
 
-**4.4 align-items**
+### 4.4 align-items
 
 设置侧轴上子元素的排列方式，如果主轴为X，侧轴就是Y（默认的）
 
@@ -211,31 +211,31 @@ justify-content:space-between;是贴边分布
 
 例子：
 
-**4.4.1  align-items:flex-start;**
+### 4.4.1  align-items:flex-start;
 
 初始状态是 也是默认的效果 align-items:flex-start;
 
 ![img](../../images/clipboard-1615443246745.png)
 
-**4.4.2  align-items:flex-end;**
+### 4.4.2  align-items:flex-end;
 
 加入 align-items:flex-end;时
 
 ![img](../../images/clipboard-1615443255144.png)
 
-**4.4.3  align-items:center;**
+### 4.4.3  align-items:center;
 
 加入 align-items:center;时
 
 ![img](../../images/clipboard-1615443262532.png)
 
-**4.4.4  align-items:stretch;**
+### 4.4.4  align-items:stretch;
 
 加入 align-items:stretch;时 注意要子容器不要设高度，因为这个属性会将子容器的高度拉升至父容器一样（包含子容器的margin）
 
 ![img](../../images/clipboard-1615443270594.png)
 
-**4.5 align-content** 
+### 4.5 align-content 
 
 设置侧轴上子元素的排列方式（多行）
 
@@ -247,7 +247,7 @@ justify-content:space-between;是贴边分布
 
 ![img](../../images/clipboard-1615443286815.png)
 
-**4.5.1  align-content:flex-start ;**
+### 4.5.1  align-content:flex-start ;
 
 紧挨着的第一行
 
@@ -255,13 +255,13 @@ justify-content:space-between;是贴边分布
 
 ![img](../../images/clipboard-1615443295315.png)
 
-**4.5.2  align-content:flex-end ;**
+### 4.5.2  align-content:flex-end ;
 
 从下面开始分布
 
 ![img](../../images/clipboard-1615443311404.png)
 
-**4.5.3  align-content:center ;**
+### 4.5.3  align-content:center ;
 
 从中间开始分布
 
@@ -269,11 +269,11 @@ justify-content:space-between;是贴边分布
 
 ![img](../../images/clipboard-1615443318058.png)
 
-**4.5.4  align-content:space-around;**
+### 4.5.4  align-content:space-around;
 
 ![img](../../images/clipboard-1615443326342.png)
 
-**4.5.5  align-content:space-between;**
+### 4.5.5  align-content:space-between;
 
 ![img](../../images/clipboard-1615443334093.png)
 
@@ -283,7 +283,7 @@ align-items适用于单行情况下，只有上对齐、下对齐、居中和拉
 align-content适应于换行(多行)的情况下（单行情况下无效)，可以设置上对齐、下对齐、居中、拉伸以及平均分配剩余空间等属性值。
 总结就是单行找align-items多行找align-content
 
-**4.6 flex-flow**
+### 4.6 flex-flow
 
 flex-flow属性是flex-direction和flex-wrap的复合属性
 
@@ -305,12 +305,12 @@ flex-wrap:wrap;
 | ------------------- |
 | flex-wrap:wrap;     |
 
-**5 Felx布局子项常见属性**
+## 5 Felx布局子项常见属性
 
 flex子项目占的份数
 align-self控制子项自己在侧轴的排列方式order属性定义子项的排列顺序(前后顺序)
 
- **5.1.1  flex**
+### 5.1.1  flex
 
 flex属性定义子项目分配剩余空间，用flex来表示占多少份数。
 
@@ -424,7 +424,7 @@ p span:nth-child(1){
 
 
 
- **5.1.2  align-self**
+### 5.1.2  align-self
 
 控制子元素在侧轴上自己移动
 
@@ -446,7 +446,7 @@ div span:nth-child(3) {
 
 ![img](../../images/clipboard-1615444035763.png)
 
-**5.1.3  order**
+### 5.1.3  order
 
 例子2
 
