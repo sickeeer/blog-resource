@@ -6,6 +6,7 @@
   "author": "sicker",
   "license": "MIT",
   "devDependencies": {
+    "@mr-hope/vuepress-plugin-sitemap": "^1.12.1",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/theme-blog": "^2.3.3",
     "vuepress": "^1.8.1",
@@ -17,7 +18,6 @@
   },
   "dependencies": {
     "markdown-it-task-lists": "^2.1.1",
-    "moment": "^2.29.1",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "moment": "^2.29.1"
   }
 }

@@ -8,7 +8,6 @@ meta:
   - name: baidu-site-verification
     content: code-www52l93oJ
 sitemap:
-  exclude: false
-  changefreq: hourly
+  changefreq: monthly
 ---
 这是一个啥也没有的首页

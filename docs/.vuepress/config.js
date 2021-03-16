@@ -1,4 +1,3 @@
-// https://github.com/ekoeryanto/vuepress-plugin-sitemap#options  sitemap 配置
 module.exports = {
   title: '养鱼技术交流博客',
   description: '前后端技术文章分享', // 文章页面描述
@@ -20,10 +19,6 @@ module.exports = {
       nextText: 'next', // Text for next links.
       lengthPerPage: '8', // Maximum number of posts per page.
       layout: 'Pagination', // Layout for pagination page
-    },
-    sitemap: {
-      hostname: 'https://110501.com',
-      exclude: ["/404.html"]
     },
     // smoothScroll: true, // 效果较差 移除
     pwa: {
@@ -148,6 +143,13 @@ module.exports = {
           visitor: true
         }
       }
-    ]
+    ],
+    [
+      "@mr-hope/sitemap",
+      {
+        hostname:"https://110501.com",
+        exclude:['https://110501.com/404.html']
+      },
+    ],
   ]
 }
