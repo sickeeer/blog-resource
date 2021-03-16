@@ -6,11 +6,12 @@
   "author": "sicker",
   "license": "MIT",
   "devDependencies": {
+    "@mr-hope/vuepress-plugin-comment": "^1.12.4",
     "@mr-hope/vuepress-plugin-sitemap": "^1.12.1",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/theme-blog": "^2.3.3",
     "vuepress": "^1.8.1",
-    "vuepress-plugin-comment": "^0.7.3"
+    "vuepress-plugin-md-enhance": "^1.12.4"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

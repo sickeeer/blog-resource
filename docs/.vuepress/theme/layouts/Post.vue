@@ -20,11 +20,12 @@
       
       <div><time dateUpdated itemprop="dateUpdated" :datetime="$page.lastUpdated">
         最后修改时间：{{ $page.lastUpdated }}
-      </time>{{$frontmatter.waiting?"<更新中>":"<全文完>"}}</div>
+      </time>{{$frontmatter.waiting?" 更新中 ":" 全文完 "}}</div>
       <footer>
         <Newsletter v-if="$service.email.enabled" />
         <hr />
-        <Comment />
+        留下一条留言?
+          <Comment />
       </footer>
     </article>
     <Toc />
@@ -34,12 +35,14 @@
 <script>
 import Toc from '@theme/components/Toc.vue'
 import PostMeta from '@theme/components/PostMeta.vue'
-import Comment from '@theme/components/Comment.vue'
+// import PageInfo from '@mr-hope/vuepress-plugin-comment/lib/client/PageInfo.vue'
+import Comment from '@mr-hope/vuepress-plugin-comment/lib/client/Comment.vue'
 
 export default {
   components: {
     Toc,
     PostMeta,
+    // PageInfo,
     Comment,
     Newsletter: () => import('@theme/components/Newsletter.vue'),
   },
@@ -48,7 +51,6 @@ export default {
 
 <style lang="stylus">
 @require '../styles/wrapper.styl'
-
 .vuepress-blog-theme-content
   @extend $wrapper
   font-size 16px

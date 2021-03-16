@@ -51,7 +51,7 @@ module.exports = {
         // layout: 'FrontmatterKey', // Layout component name for entry page.
         // scopeLayout: 'ScopeLocation', // Layout component name for scope page.
         frontmatter: { //Front matter for entry page.
-          description: '博客内文章标签一览'
+          description: '博客内文章标签一览',
         },
         pagination: { // Pagination behavior
           lengthPerPage: 8,
@@ -76,7 +76,7 @@ module.exports = {
       canonical_base: 'https://110501.com',
       rss: true,
       atom: true,
-      json: true
+      json: true,
     },
     nav: [
       {
@@ -132,23 +132,28 @@ module.exports = {
       }
     ],
     [
-      'vuepress-plugin-comment',
-      {
-        choosen: 'valine', 
-        // options选项中的所有参数，会传给Valine的配置
-        options: {
-          el: '#valine-vuepress-comment',
-          appId: 'T8D4HdGDG2rdC67ellt0Y6NS-gzGzoHsz',
-          appKey: 'HvusVCh8ROBwFdMYdDjBxLI2',
-          visitor: true
-        }
-      }
-    ],
-    [
       "@mr-hope/sitemap",
       {
-        hostname:"https://110501.com",
-        exclude:['https://110501.com/404.html']
+        hostname: "https://110501.com",
+        exclude: ['https://110501.com/404.html']
+      },
+    ],
+    [
+      "md-enhance",
+      {
+        enableAll: true,
+      },
+    ],
+    [
+      "@mr-hope/comment",
+      {
+        type: 'valine',
+        // options选项中的所有参数，会传给Valine的配置
+        appId: 'T8D4HdGDG2rdC67ellt0Y6NS-gzGzoHsz',
+        appKey: 'HvusVCh8ROBwFdMYdDjBxLI2',
+        visitor: true,
+        recordIP: true,
+        enableQQ: true,
       },
     ],
   ]

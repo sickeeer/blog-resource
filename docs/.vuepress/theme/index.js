@@ -25,30 +25,6 @@ module.exports = themeConfig => {
     pwa: !!themeConfig.pwa,
   })
 
-  /**
-   * Configure blog plugin
-   */
-  const defaultBlogPluginOptions = {
-    directories: [ // 分类
-      {
-        id: 'post',
-        dirname: '_posts',
-        path: '/post/',
-        itemPermalink: '/post/:year/:month/:day/:slug',
-      },
-    ],
-    frontmatters: [ 
-      {
-        id: 'tag',
-        keys: ['tags'],
-        path: '/tag/',
-      },
-    ],
-    globalPagination: {
-      lengthPerPage: 5,
-    },
-  }
-
   let resolvedFeedOptions
   const isFeedEnabled = themeConfig.feed && themeConfig.feed.canonical_base
   if (isFeedEnabled) {
@@ -59,6 +35,7 @@ module.exports = themeConfig => {
       ...feedOptions
     } = themeConfig.feed
     resolvedFeedOptions = Object.assign({}, feedOptions, {
+      favicon: "http://110501.com/favicon.png", // 未生效
       feeds: {
         rss2: { enable: rss },
         atom1: { enable: atom },
@@ -71,9 +48,9 @@ module.exports = themeConfig => {
     'directories',
     'frontmatters',
     'globalPagination',
-    'sitemap',
-    'comment',
-    'newsletter',
+    // 'sitemap',
+    // 'comment',
+    // 'newsletter',
   ]
   const themeConfigPluginOptions = {
     ...pick(themeConfig, properties),
@@ -82,7 +59,6 @@ module.exports = themeConfig => {
 
   const blogPluginOptions = Object.assign(
     {},
-    defaultBlogPluginOptions,
     themeConfigPluginOptions
   )
 
@@ -94,7 +70,7 @@ module.exports = themeConfig => {
 
   const plugins = [
     '@vuepress/plugin-nprogress',
-    ['@vuepress/medium-zoom', true],
+    // ['@vuepress/medium-zoom', true],
     [
       '@vuepress/search',
       {
@@ -102,58 +78,7 @@ module.exports = themeConfig => {
       },
     ],
     ['@vuepress/blog', blogPluginOptions],
-    ['smooth-scroll', enableSmoothScroll],
-    ['container', {
-      type: 'info',
-      defaultTitle: {
-        '/': '信息',
-        '/en/': 'Info'
-      }
-    }],
-    ['container', {
-      type: 'tip',
-      defaultTitle: {
-        '/': '提示',
-        '/en/': 'TIP'
-      }
-    }],
-    ['container', {
-      type: 'warning',
-      defaultTitle: {
-        '/': '注意',
-        '/en/': 'WARNING'
-      }
-    }],
-    ['container', {
-      type: 'danger',
-      defaultTitle: {
-        '/': '警告',
-        '/en/': 'WARNING'
-      }
-    }],
-    ['container', {
-      type: 'details',
-      before: info => `<details class="custom-block details">${info ? `<summary>${info}</summary>` : ''}\n`,
-      after: () => '</details>\n',
-      defaultTitle: {
-        '/': '点击查看',
-        '/en/': 'DETAILS'
-      }
-    }],
-    ['container', {
-      type: 'center',
-      before: info => `<div class="center-container">`,
-      after: () => '</div>'
-    }],
-    ['container', {
-      type: 'theorem',
-      before: info => `<div class="custom-block theorem"><p class="title">${info}</p>`,
-      after: '</div>'
-    }],
-    ['container', {
-      type: 'right',
-      defaultTitle: ''
-    }],
+    // ['smooth-scroll', enableSmoothScroll],
   ]
 
   /**
