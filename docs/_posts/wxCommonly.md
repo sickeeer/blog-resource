@@ -16,9 +16,11 @@ layout: Post
     </view>
 ```
 
-**itemJira：循环数据
+```
+itemJira：循环数据
 data-item="{{itemJira}}" ：点击后传入的数据
-注意：data-item、bindtap要在一个标签上**
+注意：data-item、bindtap要在一个标签上 
+```
 
 ### 2.父传子
 
@@ -89,3 +91,8 @@ javascript
 ```
 
 **注意：样式要用引号包裹**
+### 5.禁止页面滚动
+json文件中配置：
+```
+"disableScroll": true
+```
