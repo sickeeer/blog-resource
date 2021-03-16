@@ -178,6 +178,7 @@ metaTitle: 网页的title
 sitemap:
   changefreq: monthly [alway|shourly|daily|weekly|monthly|yearly|never]
 comment: false
+waiting: false
 ---
 ```
 

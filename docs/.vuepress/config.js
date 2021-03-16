@@ -48,8 +48,8 @@ module.exports = {
         keys: ['tag', 'tags'], // Frontmatter keys used to classify pages
         path: '/tag/', // Entry page for current classifier
         title: '标签', // Entry, scope and pagination page titles for current classifier.
-        // layout: 'FrontmatterKey', // Layout component name for entry page.
-        // scopeLayout: 'ScopeLocation', // Layout component name for scope page.
+        layout: 'FrontmatterKey', // Layout component name for entry page.
+        // scopeLayout: 'BaseListLayout', // Layout component name for scope page.
         frontmatter: { //Front matter for entry page.
           description: '博客内文章标签一览',
         },
@@ -62,8 +62,8 @@ module.exports = {
         keys: ['author'], // Frontmatter keys used to classify pages
         path: '/author/', // Entry page for current classifier
         title: '作者', // Entry, scope and pagination page titles for current classifier.
-        // layout: 'FrontmatterKey', // Layout component name for entry page.
-        // scopeLayout: 'ScopeLocation', // Layout component name for scope page.
+        layout: 'FrontmatterKey', // Layout component name for entry page.
+        // scopeLayout: 'BaseListLayout', // Layout component name for scope page.
         frontmatter: { //Front matter for entry page.
           description: '博客作者一览'
         },

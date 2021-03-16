@@ -1,5 +1,11 @@
 <template>
   <div id="base-list-layout">
+    <p v-if="$route.meta.pid=='tag' && $route.meta.id!='tag'">
+      当前标签：<span style="color:red;margin-right:5px;">{{$route.meta.id}}</span>  <a href='/tag/'>返回标签列表</a>
+    </p>
+    <p v-if="$route.meta.pid=='author' && $route.meta.id!='author'">
+      当前作者：<span style="color:red;margin-right:5px;">{{$route.meta.id}}</span>  <a href='/author/'>返回作者列表</a>
+    </p>
     <div class="ui-posts" itemscope itemtype="http://schema.org/Blog">
       <article
         v-for="page in pages"
@@ -110,6 +116,7 @@ export default {
 
   created() {
     this.paginationComponent = this.getPaginationComponent()
+    console.log(this.$route)
   },
 
   methods: {

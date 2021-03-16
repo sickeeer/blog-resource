@@ -25,7 +25,7 @@
       <footer>
         <Newsletter v-if="$service.email.enabled" />
         <hr />
-        {{$frontmatter.comment?"留下一条留言":"留言已关闭"}}
+        {{$frontmatter.comment===false?"留言已关闭":"留下一条留言?"}}
           <Comment />
       </footer>
     </article>
