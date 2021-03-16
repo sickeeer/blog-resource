@@ -141,7 +141,14 @@ module.exports = {
     [
       "md-enhance",
       {
-        enableAll: true,
+        align: true,
+        sup:true,
+        sub:true,
+        footnote:true,
+        mark:true,
+        tex:true,
+        flowchart:true,
+        demo:true,
       },
     ],
     [
