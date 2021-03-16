@@ -7,5 +7,8 @@ meta:
     content: 技术博客,javascript,ElementUI,vuejs,java
   - name: baidu-site-verification
     content: code-www52l93oJ
+sitemap:
+  exclude: false
+  changefreq: hourly
 ---
 这是一个啥也没有的首页

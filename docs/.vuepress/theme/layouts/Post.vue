@@ -17,6 +17,10 @@
         />
       </header>
       <Content itemprop="articleBody" />
+      
+      <div><time dateUpdated itemprop="dateUpdated" :datetime="$page.lastUpdated">
+        最后修改时间：{{ $page.lastUpdated }}
+      </time>{{$frontmatter.waiting?"<更新中>":"<全文完>"}}</div>
       <footer>
         <Newsletter v-if="$service.email.enabled" />
         <hr />
@@ -30,7 +34,7 @@
 <script>
 import Toc from '@theme/components/Toc.vue'
 import PostMeta from '@theme/components/PostMeta.vue'
-import { Comment } from '@vuepress/plugin-blog/lib/client/components'
+import Comment from '@theme/components/Comment.vue'
 
 export default {
   components: {
