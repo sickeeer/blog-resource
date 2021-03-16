@@ -37,7 +37,7 @@
             itemscope
           >
             <NavigationIcon />
-            <span itemprop="name">{{ page.frontmatter.author }}</span>
+            <span itemprop="name"><a :href="'/author/'+encodeURIComponent(page.frontmatter.author)+'/'">{{ page.frontmatter.author }}</a></span>
             <span v-if="page.frontmatter.location" itemprop="address">
               &nbsp; in {{ page.frontmatter.location }}
             </span>

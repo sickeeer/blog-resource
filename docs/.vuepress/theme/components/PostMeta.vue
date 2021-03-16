@@ -20,6 +20,9 @@
     <ul v-if="tags" class="post-meta-tags" itemprop="keywords">
       <PostTag v-for="tag in resolvedTags" :key="tag" :tag="tag" />
     </ul>
+    <div>
+      预计阅读时间：{{reading.minutes}} min - {{reading.words}} 字
+    </div>
   </div>
 </template>
 
@@ -47,6 +50,9 @@ export default {
     location: {
       type: String,
     },
+    reading: {
+      type: Object,
+    }
   },
   computed: {
     resolvedDate() {

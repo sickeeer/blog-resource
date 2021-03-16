@@ -14,6 +14,7 @@
           :author="$frontmatter.author"
           :date="$frontmatter.date"
           :location="$frontmatter.location"
+          :reading="$page.readingTime"
         />
       </header>
       <Content itemprop="articleBody" />
