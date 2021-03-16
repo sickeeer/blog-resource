@@ -4,7 +4,7 @@ date: 2021-03-09
 tags: 
   - vuepress
   - 插件
-author: 塞卡
+author: sicker
 location: 移动智地
 summary: 引入组件，短短几句搞定在vuepress/markdown-it中加入checkbox支持
 ---

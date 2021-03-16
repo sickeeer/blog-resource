@@ -7,7 +7,7 @@ meta:
 ---
 ## author
 - [一览](/author/)
-- [塞卡](/author/塞卡/)
+- [塞卡](/author/sicker/)
 - [linvkey](/author/LinvKey/)
 - [孙一钫](/author/孙一钫/)
 ## TODO

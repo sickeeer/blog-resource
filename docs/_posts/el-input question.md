@@ -6,8 +6,7 @@ tags:
   - Vue
   - ElementUI
 author: LinvKey
-location: yidonghzhidi
-layout: Post
+location: 移动智地
 meta: 
   - name: description
     content: 关于el-input标签无法输入文字的问题

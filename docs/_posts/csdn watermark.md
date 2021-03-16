@@ -6,7 +6,6 @@ tags:
   - csdn
 author: LinvKey
 location: 移动智地
-layout: Post
 summary: 解决使用csdn的markdown模式编辑时，置入图片生成水印问题
 ---
 

@@ -3,7 +3,7 @@ title: 为 vuepres 增加 favicon 站标
 date: 2021-03-09
 tags: 
   - vuepress
-author: 塞卡
+author: sicker
 location: 移动智地
 summary: 为 vuepres 增加 favicon 站标，让网站更加美观吧。
 ---
